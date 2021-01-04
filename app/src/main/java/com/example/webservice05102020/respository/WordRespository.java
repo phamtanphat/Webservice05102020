@@ -10,7 +10,7 @@ import java.util.List;
 import io.reactivex.Maybe;
 
 public class WordRespository {
-    private  static WordRespository instance = null;
+    private static WordRespository instance = null;
     private ApiRequest apiRequest = null;
 
     private WordRespository(){
@@ -22,7 +22,7 @@ public class WordRespository {
         }
         return instance;
     }
-    public Maybe<ResponseApi<List<WordApi>>> fetchWord(String page , String numitems ){
+    public Maybe<ResponseApi<List<WordApi>>> fetchWords(String page , String numitems){
         return  apiRequest.fetchWords(page ,numitems );
     }
 }
