@@ -1,5 +1,6 @@
 package com.example.webservice05102020.api;
 
+import com.example.webservice05102020.BuildConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -33,7 +34,7 @@ public class RetrofitInit {
         Gson gson = new GsonBuilder().setLenient().create();
 
         instance = new Retrofit.Builder()
-                .baseUrl("https://phatpham0209.000webhostapp.com/")
+                .baseUrl("https://phatpham0209.000webhostapp.com/apituvung05102020/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
