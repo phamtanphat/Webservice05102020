@@ -1,14 +1,23 @@
 package com.example.webservice05102020.model;
 
-import java.util.List;
-
-public class ApiResponse <T>{
+public class ResponseApi<T>{
 
     private int totalpage;
     private String currentpage;
     private boolean success;
     private Object message;
     private T data;
+
+    public ResponseApi(int totalpage, String currentpage, boolean success, Object message, T data) {
+        this.totalpage = totalpage;
+        this.currentpage = currentpage;
+        this.success = success;
+        this.message = message;
+        this.data = data;
+    }
+
+    public ResponseApi() {
+    }
 
     public int getTotalpage() {
         return totalpage;
@@ -42,16 +51,4 @@ public class ApiResponse <T>{
         this.message = message;
     }
 
-    // 4 loai :
-        //database local : Ten+entity
-        //database remote : WordApi
-        //business : ten model
-        //form : LoginForm
-
-//    Pushnotification
-//    {data : {title : "Thong bao" , body : "Version moi"};
-//    Adapter
-//     Header : {title : "Chi tiet" }
-//     Dialog
-//    Chua noi dung tu dialog
 }
