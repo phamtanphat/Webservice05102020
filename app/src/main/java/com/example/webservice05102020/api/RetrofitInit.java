@@ -1,6 +1,5 @@
 package com.example.webservice05102020.api;
 
-import com.example.webservice05102020.BuildConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

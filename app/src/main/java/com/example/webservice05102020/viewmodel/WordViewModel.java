@@ -2,6 +2,7 @@ package com.example.webservice05102020.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.example.webservice05102020.model.ResponseApi;
 import com.example.webservice05102020.model.WordApi;
@@ -15,12 +16,12 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class WordViewModel {
+public class WordViewModel extends ViewModel {
     private WordRespository wordRespository = null;
     private MutableLiveData<ResponseApi<List<WordApi>>> responseWords = null;
 
-    public WordViewModel(MutableLiveData<ResponseApi<List<WordApi>>> responseWords) {
-        this.responseWords = responseWords;
+    public WordViewModel() {
+        this.responseWords = new MutableLiveData<>();
         wordRespository = WordRespository.getInstance();
     }
 
