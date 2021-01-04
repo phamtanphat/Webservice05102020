@@ -1,8 +1,10 @@
-package com.example.webservice05102020;
+package com.example.webservice05102020.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.webservice05102020.R;
 
 public class MainActivity extends AppCompatActivity {
 
